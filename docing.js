@@ -13,10 +13,12 @@ function step(timestamp){
   start = timestamp;
  }
   const elapsed = timestamp - start;
-  console.log(elapsed);
+  start = timestamp;
   
-   
+  console.log(elapsed);
+  window.requestAnimationFrame(step);
 }
+window.requestAnimationFrame(step);
   const canvas = document.getElementById("game");
   const width = canvas.width;
   const height = canvas.height;
